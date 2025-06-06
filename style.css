@@ -8,21 +8,38 @@
 .main-container{
     display: flex;
     flex-direction: row;
-    --background-text-color : #e3e7eb;
+    --background-text-color : #093a6e4f;
     --background-sign-up-color : #d9ebfe;
-    --background-footer-color : #3f70a5;
+    --background-footer-color : #e3e7eb;
     
 }
 
 .background-image-container{
         width: 30%;
-
+        position: relative;
 }
 
+.logo-div{
+    width: 30%;
+    height: 8.5vh;
+    background-color: #00000096;
+    position: absolute;
+    display: flex;
+    gap: 150px;
+    align-items: center;
+}
+.logo{
+    height: 80px;
+}
 .sign-up-container{
         width: 70%;
 
 
+}
+.logo-text{
+    font-size: 36px;
+    color: #FFFFFF;
+    font-family: 'norsebold';
 }
 
 .background-image{
@@ -47,6 +64,8 @@
     background-color: var(--background-sign-up-color);
     padding: 20px;
     font-family: 'cinzelregular';
+    font-size: 12px;
+    font-weight: 600;
 
 }
 
@@ -54,6 +73,96 @@
     padding: 20px;
 }
 
+
+.form-area input[type = "text"],
+.form-area input[type = "tel"],
+.form-area input[type = "email"],
+.form-area input[type = "password"]
+{
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 5px;
+    width: 30%;
+    padding: 7px;
+    font-size: 14px;
+    
+}
+
+.form-area input[type = "text"]:focus,
+.form-area input[type = "tel"]:focus,
+.form-area input[type = "email"]:focus,
+.form-area input[type = "password"]:focus{
+    border: 2px solid rgb(0, 101, 225);
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px #3f70a5;
+}
+
+.form-area{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-area label{
+    padding-bottom: 2px;
+    letter-spacing: 1px;
+}
+
+
+
+.form-area input[type = "password"]:focus:invalid{
+    border: 2px solid red;
+}
+
+
+
 .submit-button-container{
     background-color: var(--background-footer-color);
+    padding-bottom: 146px ;
+    padding-top : 25px;
+    padding-left: 55px;
+}
+
+.submit-button{
+    background-color: green;
+    border-radius: 5px;
+    padding: 10px;
+    color: #D6D9DC;
+    font-family: 'cinzel_decorativeregular';
+    font-weight: 700;
+}
+
+.submit-button:hover
+{
+    background-color: #cf3603a8;
+    color: rgb(219, 253, 0);
+}
+
+.login-message{
+    padding-top: 25px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.login-button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    color: green;
+    
+}
+
+.login-button:hover{
+    color: red;
 }
